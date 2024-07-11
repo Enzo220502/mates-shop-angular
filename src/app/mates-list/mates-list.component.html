@@ -1,0 +1,41 @@
+<div class="text-center">
+<h2>Lista de Mates</h2>
+<table class="table-responsive align-middle text-center">
+    <thead>
+      <tr>
+        <th scope="col"></th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Material</th>
+        <th scope="col">Precio</th>
+        <th scope="col">Stock</th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+        @for (mate of matesList; track mate.name) {
+            <tr>
+                <td><img class="img-fluid img-w img-thumbnail" [src] = "mate.image" [alt] = "mate.name"></td>
+                <td>{{ mate.name | titlecase}}</td>
+                <td>{{ mate.material }}</td>
+                <td>{{ mate.price | currency}}</td>
+                @if (mate.stock > 0) {
+                    <td>{{ mate.stock }}</td>
+                    <td><app-input-incrementable [(quantity)]="mate.quantity" [max]="mate.stock" ></app-input-incrementable></td>
+                    <td><button class="btn btn-primary btn-sm" (click)="addToCart(mate)"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-plus-fill" viewBox="0 0 16 16">
+                      <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0M9 5.5V7h1.5a.5.5 0 0 1 0 1H9v1.5a.5.5 0 0 1-1 0V8H6.5a.5.5 0 0 1 0-1H8V5.5a.5.5 0 0 1 1 0"/>
+                    </svg></button></td>
+                } @else {
+                  <td><span class="badge text-bg-warning"> SIN STOCK</span></td>
+                  <td></td>
+                  <td></td>
+                }
+            </tr>
+        }@empty {
+            <tr>
+              <td colspan="4">No hay cervezas para mostrar.</td>
+            </tr>
+        }
+    </tbody>
+  </table>
+</div>

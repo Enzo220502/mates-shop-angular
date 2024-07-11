@@ -1,0 +1,5 @@
+<div class="input-group" role="group" aria-label="Basic example">
+    <button class="btn btn-primary btn-sm" (click) = "decreaseQuantity()">-</button>
+    <input type="number" min=0 max={{max}} [(ngModel)] = "quantity" (keyup)="onChangeQuantity($event)" (change)="onChangeQuantity($event)" class ="text-center w-auto">
+    <button class="btn btn-primary btn-sm" (click) = "incrementQuantity()">+</button>
+</div>
