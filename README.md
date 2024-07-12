@@ -1,6 +1,16 @@
-# MatesShop
+# DATOS ALUMNO
+Alumno: Del Sole, Enzo Jesuan
+DNI: 43909109
+Email: enzodelsole@gmail.com (edelsole@alumnos.exa.unicen.edu.ar)
+Sede: Tandil
+## MATES-SHOP
+El objetivo de este proyecto es simular un e-commerce de venta de mates,pudiendo visualizar en la interfaz de la aplicacion una foto del mismo,nombre,precio, cantidad que hay disponibles y a su vez tenemos un componente con el cual podemos seleccionar la cantidad de objetos que queremos agregar al carrito,una vez que seleccionamos la cantidad podemos agregar este objeto/s al carrito.
+Luego podemos visualizar el carrito como un modal, el cual se activa con un boton, desplegando asi una lista de los elementos que contiene este componente,ademas previo a su activacion se puede observar la cantidad de productos que posee el carrito. Tambien existe un boton para realizar la compra de los objetos en el carrito(no implementado).
+Tambien se encuentra en nuestra barra de navegacion dos links, mates(lista de los mates disponibles) y about.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.6.
+## ACLARACION
+
+Tuve un problema con el ruteo, cuando defino la ruta con el path:'', no entiendo por que no me lo toma, estuve investigando, leyendo documentacion y no logre solucionar el problema, por lo que para acceder a la pagina se debe agregar un '/mates' al final de la ruta en la preview de Stackblitz. Igualmente seguire buscando el error para luego corregirlo,en caso de encontrarlo realizare un nuevo commit indicandolo. 
 
 ## Development server
 
