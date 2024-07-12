@@ -13,7 +13,7 @@ import { MatesDataService } from '../mates-data.service';
 export class MatesCartComponent {
 
   cartList$:Observable<Mate[]> = this.cartService.cartList.asObservable();
-  cantElementos:number = this.cartList$.subscribe.length;
+  cantElementos$:Observable<number> = this.cartService.cant.asObservable();
   matesListComponent: MatesListComponent;
   
   constructor(private cartService : MatesCartServiceService, private matesData:MatesDataService){

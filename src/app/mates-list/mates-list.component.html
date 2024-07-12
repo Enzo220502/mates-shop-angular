@@ -1,6 +1,7 @@
-<div class="text-center">
-<h2>Lista de Mates</h2>
-<table class="table-responsive align-middle text-center">
+<h2 class="text-center font-monospace">Lista de Mates</h2>
+<div class="text-center m-2">
+  <app-mates-cart></app-mates-cart>
+  <table class="table-responsive align-middle text-center">
     <thead>
       <tr>
         <th scope="col"></th>
@@ -15,7 +16,7 @@
     <tbody>
         @for (mate of matesList; track mate.name) {
             <tr>
-                <td><img class="img-fluid img-w img-thumbnail" [src] = "mate.image" [alt] = "mate.name"></td>
+                <td><img class="img-fluid img-w img-thumbnail" src = {{mate.image}} alt = "nombre mate"></td>
                 <td>{{ mate.name | titlecase}}</td>
                 <td>{{ mate.material }}</td>
                 <td>{{ mate.price | currency}}</td>

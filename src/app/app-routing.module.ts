@@ -3,19 +3,10 @@ import { RouterModule, Routes } from '@angular/router';
 import { MatesShopComponent } from './mates-shop/mates-shop.component';
 import { MatesAboutComponent } from './mates-about/mates-about.component';
 
-const routes: Routes = [{
-    path:'',
-    redirectTo: 'mates',
-    pathMatch : 'full'
-  },
-  {
-    path:'mates',
-    component : MatesShopComponent
-  },
-  {
-    path:'about',
-    component:MatesAboutComponent
-  }
+const routes: Routes = [
+  {path:'mates',component : MatesShopComponent},
+  { path:'about', component:MatesAboutComponent},
+  { path: ' ', redirectTo: 'mates',pathMatch: 'full'}
 ];
 
 @NgModule({
